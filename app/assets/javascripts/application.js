@@ -15,5 +15,6 @@
 //= require react
 //= require react_ujs
 //= require components
-//= require bootstrap-sprockets
+//= resuire popper
+//= require bootstrap
 //= require_tree .

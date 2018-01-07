@@ -1,5 +1,17 @@
 Rails.application.routes.draw do
-  resources :tweets
+  get 'replies/new'
+
+  get 'replies/create'
+
+  get 'replies/show'
+
+  get 'tweets/create'
+
+  get 'tweets/show'
+
+  resources :tweets do 
+  	resources :reply, only: [:create]
+  end
   devise_for :users
   
   root "home#index"

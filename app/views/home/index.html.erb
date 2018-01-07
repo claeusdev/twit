@@ -1,3 +1,19 @@
-<% @tweets.each do |tweet| %>
-	<%= tweet.body %>
-<% end %>
+<div class="container">
+	<% @tweets.each do |tweet| %>
+		<%= tweet.content %>
+		<%= react_component('Reply', {author: 'Kofi Manu', content: "Awesome tweet"}) %>
+	<% end %>
+
+	<%= form_with(model: @tweet, local: true) do |f|%>
+
+		<div class="form-group">
+			<%= f.text_area :content, class: "form-control" %>
+		</div>
+		
+
+		<%= f.submit "Tweet", class: "btn btn-primary" %>
+
+	<% end %>
+</div>
+
+
