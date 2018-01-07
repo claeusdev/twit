@@ -7,6 +7,11 @@ class TweetsController < ApplicationController
   	end
   end
 
+  def show
+    @tweet = Tweet.find(params[:id])
+    @replies = @tweet.replies
+  end
+
 
   private
 

@@ -1,7 +1,7 @@
 <div class="container">
 	<% @tweets.each do |tweet| %>
-		<%= tweet.content %>
-		<%= react_component('Reply', {author: 'Kofi Manu', content: "Awesome tweet"}) %>
+		<%= link_to tweet.content, tweet %>
+		
 	<% end %>
 
 	<%= form_with(model: @tweet, local: true) do |f|%>

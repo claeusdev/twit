@@ -1,0 +1,1 @@
+json.(reply, :id, :content, :user)
